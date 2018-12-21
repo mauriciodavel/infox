@@ -13,6 +13,7 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="lib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -23,7 +24,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="jgoodies-common-1.8.0.jar" sourcepath="jgoodies-common-1.8.0-sources.jar"/>
-	<classpathentry kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aluno.cad/git/infox/infox/jgoodies-common-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aluno.cad/git/infox/infox/jgoodies-common-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aluno.cad/git/infox/infox/jgoodies-forms-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aluno.cad/git/infox/infox/jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aluno.cad/git/infox/infox/mysql-connector-java-5.1.45-bin.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

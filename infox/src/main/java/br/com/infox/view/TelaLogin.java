@@ -29,6 +29,7 @@ public class TelaLogin extends JFrame {
     ResultSet rs = null;
     private JTextField txtUsuario;
     private JPasswordField txtSenha;
+    private JLabel lblStatus;
 
     // criando o método logar
     public void logar() {
@@ -50,16 +51,16 @@ public class TelaLogin extends JFrame {
                 if (perfil.equals("admin")) {
                     TelaPrincipal principal = new TelaPrincipal();
                     principal.setVisible(true);
-                    TelaPrincipal.menRel.setEnabled(true);
-                    TelaPrincipal.MenCadUsu.setEnabled(true);
-                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
-                    TelaPrincipal.lblUsuario.setForeground(Color.red);
+                    //TelaPrincipal.menRel.setEnabled(true);
+                    //TelaPrincipal.MenCadUsu.setEnabled(true);
+                    //TelaPrincipal.lblUsuario.setText(rs.getString(2));
+                    //TelaPrincipal.lblUsuario.setForeground(Color.red);
                     // fechando a tela de login ao logar
                     this.dispose();
                 } else {
                     TelaPrincipal principal = new TelaPrincipal();
                     principal.setVisible(true);
-                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+                    //TelaPrincipal.lblUsuario.setText(rs.getString(2));
                     this.dispose();
                 }
                 // fechando a conexão com o banco de dados
@@ -93,6 +94,15 @@ public class TelaLogin extends JFrame {
 	 */
 	public TelaLogin() {
 		
+		conexao = ModuloConexao.conector();
+        // a linha abaixo serve de apoio e informação ao usuário
+        //System.out.println(conexao);
+       // if (conexao != null) {
+       //     lblStatus.setIcon(new ImageIcon(TelaLogin.class.getResource("/br/com/infox/icones/dbOK1.png")));
+       // } else {
+       //     lblStatus.setIcon(new ImageIcon(TelaLogin.class.getResource("/br/com/infox/icones/dbErro1.png")));
+       // }
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -121,7 +131,7 @@ public class TelaLogin extends JFrame {
 		imgLogUsu.setBounds(0, 38, 115, 115);
 		contentPane.add(imgLogUsu);
 		
-		JLabel lblStatus = new JLabel("");
+		lblStatus = new JLabel("");
 		lblStatus.setBounds(10, 202, 58, 29);
 		contentPane.add(lblStatus);
 		
@@ -133,5 +143,8 @@ public class TelaLogin extends JFrame {
 		txtSenha = new JPasswordField();
 		txtSenha.setBounds(201, 109, 144, 20);
 		contentPane.add(txtSenha);
+	}
+	public JLabel getLblStatus() {
+		return lblStatus;
 	}
 }
