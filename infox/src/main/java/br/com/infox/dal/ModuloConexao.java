@@ -9,9 +9,9 @@ public class ModuloConexao {
         // a linha abaixo chama o driver importado de conexão
         String driver = "com.mysql.jdbc.Driver";
         // Armazenando informações referente ao banco de dados
-        String url = "jdbc:mysql://localhost:3303/dbinfox";
-        String user = "root";
-        String password = "";
+        String url = "jdbc:mysql://localhost:3306/dbinfox?useSSL=false";
+        String user = "mdavel";
+        String password = "mdavel";
         // Estabelecendo a conexão com o banco
         try {
             Class.forName(driver);
@@ -19,7 +19,7 @@ public class ModuloConexao {
             return conexao;
         } catch (Exception e) {
             // a linha abaixo serve de informação ao erro
-            // System.out.println(e);
+            System.out.println(e);
             return null;
         }
     }
